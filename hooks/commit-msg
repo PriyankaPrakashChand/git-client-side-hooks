@@ -1,0 +1,28 @@
+#!/bin/bash
+
+COMMIT_MSG_FILE=$1
+COMMIT_FILE_CONTENTS=$(cat $COMMIT_MSG_FILE)
+MSG_TO_PREPEND=$(git branch --show-current)
+# Include any branches for which you wish to disable this script
+if [ -z "$BRANCHES_TO_SKIP" ]; then
+  BRANCHES_TO_SKIP=(master develop)
+fi
+
+if [[ $MSG_TO_PREPEND == $BRANCHES_TO_SKIP ]];then
+    exit 0
+fi
+#!/bin/bash
+
+COMMIT_MSG_FILE=$1
+COMMIT_FILE_CONTENTS=$(cat $COMMIT_MSG_FILE)
+MSG_TO_PREPEND=$(git branch --show-current)
+# Include any branches for which you wish to disable this script
+if [ -z "$BRANCHES_TO_SKIP" ]; then
+  BRANCHES_TO_SKIP=(master develop)
+fi
+
+if [[ $MSG_TO_PREPEND == $BRANCHES_TO_SKIP ]];then
+    exit 0
+fi
+
+echo "$MSG_TO_PREPEND: $COMMIT_FILE_CONTENTS" > $COMMIT_MSG_FILE

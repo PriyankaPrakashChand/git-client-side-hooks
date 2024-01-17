@@ -1,0 +1,11 @@
+#!/bin/bash
+
+
+echo "*********** Running the Pre-Commit Script ********"
+echo "Over Here, Staged Files Can Be Linted "
+echo "Or Tests Can Be Run"
+echo "Based on the linting or Testing result"
+echo "The file may exit with code 0 (if all goes well) or non-zero (error)" 
+echo "This will stop the commit " 
+
+
