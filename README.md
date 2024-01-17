@@ -15,7 +15,7 @@ This is a better and more manageable approach instead of manually adding the `<h
 More client side hooks can be added. Ensure that the name of the file matches the name of the hook.
 
 
-How to Add Git Hooks:
+## How to Add Git Hooks::
 
 go to project root directory and past the hooks directory
 open a terminal and: 
