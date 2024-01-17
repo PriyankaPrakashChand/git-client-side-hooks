@@ -17,7 +17,7 @@ More client side hooks can be added. Ensure that the name of the file matches th
 
 ## How to Add Git Hooks::
 
-Go to project root directory and paste the hooks directory
+Go to the project root directory and paste the hooks directory
 open a terminal and: 
 - run `cd <project-root-directory-path>`
 - run `chmod 744  $(pwd)/hooks` [ Make the hooks directory executable by user ]
